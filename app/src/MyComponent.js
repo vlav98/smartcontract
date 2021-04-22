@@ -6,6 +6,8 @@ const { AccountData, ContractData, ContractForm } = newContextComponents;
 
 export default ({ drizzle, drizzleState }) => {
   // destructure drizzle and drizzleState from props
+  console.log(drizzleState);
+  
   return (
     <div className="App">
       <div>
@@ -29,7 +31,22 @@ export default ({ drizzle, drizzleState }) => {
 
       <div className="section">
         <h2>Shipment</h2>
-        <ContractForm drizzle={drizzle} contract="Shipping" method="set"/>
+        <p>
+          <strong>Status : </strong>
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="Shipping"
+            method="getStatus"
+          />
+        </p>
+        <ContractForm drizzle={drizzle} contract="Shipping" method="create" />
+        <ContractForm drizzle={drizzle} contract="Shipping" method="shipped" />
+        <ContractForm
+          drizzle={drizzle}
+          contract="Shipping"
+          method="delivered"
+        />
       </div>
 
       <div className="section">
