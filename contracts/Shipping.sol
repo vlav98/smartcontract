@@ -36,7 +36,7 @@ contract Shipping {
         emit Delivered(_id, State.Delivered);
     }
 
-    function giveTip(address deliveryAccount) public {
+    /* function giveTip(address deliveryAccount) public {
 
-    }
+    } */
 }
