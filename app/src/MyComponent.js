@@ -28,6 +28,11 @@ export default ({ drizzle, drizzleState }) => {
       </div>
 
       <div className="section">
+        <h2>Shipment</h2>
+        <ContractForm drizzle={drizzle} contract="Shipping" method="set"/>
+      </div>
+
+      <div className="section">
         <h2>SimpleStorage</h2>
         <p>
           This shows a simple ContractData component with no arguments, along
